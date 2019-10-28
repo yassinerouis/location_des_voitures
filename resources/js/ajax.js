@@ -1,0 +1,3 @@
+$(function fct(){
+    alert('hello');
+});

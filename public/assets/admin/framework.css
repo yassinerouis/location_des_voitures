@@ -1,0 +1,190 @@
+.btn-add-new {
+  float: right;
+  /*margin: 3px 5px 0 0;*/
+  margin-bottom: 5px;
+}
+.btn-trash {
+  float: right;
+  margin-bottom: 0;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.btn-trash i {
+  margin-left: 5px
+}
+
+.table-center td,
+.table-center th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr.higher-thead th  {
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table .icon-ok {
+  color: #62c462;
+}
+
+.table .icon-remove {
+  color: #ee5f5b;
+}
+
+.language-selector {
+  width: 110px;
+  overflow: hidden;
+  float: right;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.action-3-btn {
+  width: 215px;
+}
+
+#image-preview {
+  height: 90px;
+  width: 110px;
+  overflow: hidden;
+  float: right;
+  margin-right: 77px;
+  margin-bottom: 10px;
+}
+
+.index-thumb {
+  height: 60px;
+  max-width: none !important;
+  margin: auto;
+}
+
+#cke_ckeditor, .cke_browser_webkit {
+  width: 91% !important;
+}
+
+.notif-block {
+  width: calc((100% / 6) - 10px);
+  height: 85px;
+  position: relative;
+}
+.notif-block > a {
+  height: 65px;
+}
+.notif-block i {
+  margin-top: 5px !important;
+}
+
+.notif-block.bg-clouds a {
+  color: #888 !important;
+}
+.notif-block .label {
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
+  line-height: 19px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+/* Flat Background Colors */
+.bg-turquoise {
+  background-color: #1abc9c !important;
+}
+.bg-green {
+  background-color: #2ecc71 !important;
+}
+.bg-blue {
+  background-color: #3498db !important;
+}
+.bg-violet {
+  background-color: #9b59b6 !important;
+}
+.bg-clouds {
+  background-color: #f9f9f9 !important;
+}
+.bg-red {
+  background-color: #e74c3c !important;
+}
+.bg-orange {
+  background-color: #f39c12 !important;
+}
+.bg-yellow {
+  background-color: #f1c40f !important;
+}
+.bg-gray {
+  background-color: #b2b7b7 !important;
+}
+.bg-dark {
+  background-color: #34495e !important;
+}
+
+/*------------------- Sortable Elements -------------------*/
+ul.sortable-elements {
+  margin: 0;
+  list-style: none;
+  /*overflow: hidden;*/
+}
+ul.sortable-elements ul {
+  list-style: none !important;
+}
+ul.sortable-elements li {
+  list-style: none !important;
+  overflow: hidden;
+}
+ul.sortable-elements .ui-sortable-handle {
+  list-style: none !important;
+
+}
+
+form .accordion {
+  margin-left: 33px !important;
+  border-top: 1px solid #cdcdcd;
+}
+
+ul.sortable-elements .btn-remove-item {
+  /*margin-top: 7px;*/
+  margin-right: 15px;
+  margin-left: 60px;
+}
+ul.sortable-elements span.status {
+  display: inline-block;
+  margin-top: 7px;
+}
+
+/*#header h1 {
+  background: url(../../uploads/images/logo.png) no-repeat scroll 0 0 transparent;
+}*/
+#logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 10px;
+  max-height: 68px;
+}
+
+#user-nav {
+  width: calc(100% - 220px);
+}
+
+#user-nav > ul {
+  width: 100%;
+}
+
+#user-nav .pull-right {
+  float: right !important;
+}
+
+#currencies-table .icon-remove {
+  cursor: pointer;
+}
+
+#currencies-table .icon-remove:hover {
+  color: #d35400;
+}
+
+#sidebar .material-icons {
+  font-size: 16px;
+}
