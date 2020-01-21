@@ -16,6 +16,8 @@ use PayPal\Api\RedirectUrls;
 use PayPal\Api\Transaction;
 use PayPal\Api\PaymentExecution;
 
+/*le paiement des reservations est gere par ce controlleur*/
+
 class PaymentController extends Controller
 {
     private $apiContext;

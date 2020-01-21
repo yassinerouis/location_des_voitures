@@ -1,0 +1,15 @@
+En général, un Framework est basé sur la structure MVC.
+Le modèle-vue-contrôleur (en abrégé MVC, de l’anglais Model-View-Controller) est un patron d’architecture et une méthode de conception qui organise l’interface homme-machine (IHM) d’une application logicielle."
+Le principe d’une telle structure est de diviser l’application en 3 parties distinctes :
+- Les modèles : ils représentent les données de l’application et permettent l’interaction avec la base de données (ou les web services, etc...).
+- Les vues : ce sont les représentations (les templates) des résultats de la requête que l’utilisateur a effectuée.
+- Les contrôleurs : ils interceptent toutes les requêtes faites par les utilisateurs.
+En bref, le modèle gère la base de données, la vue produit les pages HTML et le contrôleur fait tout le reste.
+
+Les vues Laravel se sont la partie front end de l'application que j'ai conçu et developpé.
+j'ai utilise dans cette parties :
+
+- HTML et CSS
+- Bootstrap 
+- Ajax jQuery
+- Javascript

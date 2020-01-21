@@ -7,6 +7,9 @@ use App\Blog_posts;
 use App\User;
 use Auth;
 use Illuminate\Support\Facades\DB;
+
+//autoriser pour l'admin (en general) , mais il y a des routes pour l'utilisateur
+
 class Blog_commentsController extends Controller
 {
     public function __construct(){
@@ -15,7 +18,7 @@ class Blog_commentsController extends Controller
      //lister les blog_commentss
      public function index(){
 
-      //  author	image	image_alt	title	slug	meta_title	meta_description	body	
+    
         $listcomments=DB::table('blog_comments')
         ->join('blog_posts','blog_posts.id','=','blog_comments.blog_posts_id')
         ->select('blog_comments.id','blog_posts.title','blog_comments.email','blog_comments.texte','blog_comments.name','blog_comments.active','blog_comments.updated_at')   
@@ -34,7 +37,7 @@ class Blog_commentsController extends Controller
     
     return view ('blog_client.create',['post'=>$post]);
  }
-   //enregistrer un blog_post
+   //enregistrer un blog_comment
   public function store(Request $request){
    $x=User::find(Auth::user()->id);
      $blog_comment=new Blog_comments();	
@@ -55,7 +58,7 @@ class Blog_commentsController extends Controller
  session()->flash('success','Commentaire bien enregistré ! !');
   
   }
-  //recuperer un car -> mettre dans formulaire
+  //recuperer un commentaire -> mettre dans formulaire(admin)
   public function edit($id){
      $com=Blog_comments::find($id);
      $post=Blog_posts::all();

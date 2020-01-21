@@ -12,6 +12,9 @@ use App\User;
 use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\UploadedFile;
+
+//ce controlleur fais la gestion des publications publiees par les administrateurs
+//blog_post : publication
 class Blog_postsController extends Controller
 {
     public function __construct(){

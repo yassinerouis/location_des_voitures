@@ -9,6 +9,10 @@ use App\Cars_prices;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+
+/*AJAX est l'art d'échanger des données avec un serveur et de mettre à jour des parties d'une page Web,
+ sans recharger toute la page. et ce controlleur nous donne cette possibilité.
+*/
 class AjaxController extends Controller
 {
   public function ajaxCars(Request $request){

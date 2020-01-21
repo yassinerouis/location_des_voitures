@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+//pour la gestion des formulaires ( verification et validation )
 class car_categorieRequest extends FormRequest
 {
     /**

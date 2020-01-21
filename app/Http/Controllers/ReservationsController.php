@@ -11,6 +11,9 @@ use App\Reservations;
 use App\Supplement_reservations;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\reservationRequest;
+
+//les reservations effectuees par l'admin aux clients
+
 class ReservationsController extends Controller
 {
   

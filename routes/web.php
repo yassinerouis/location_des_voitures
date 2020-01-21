@@ -11,12 +11,15 @@ use App\Notifications\NewMessage;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Toutes les routes de l'applications sont ici 
 
 Route::get('/', function () {
-    //User::find(1)->notify(new NewMessage());
+   
     return view('welcome');
 });
+
 //les routes cars
+
 Route::get('cars','CarsController@index');
 Route::get('cars/create','CarsController@create');
 Route::post('cars','CarsController@store');
@@ -24,7 +27,9 @@ Route::get('cars/{id}/edit','CarsController@edit');
 Route::get('cars/{id}/details','CarsController@details');
 Route::put('cars/{id}','CarsController@update');
 Route::get('cars/{id}','CarsController@destroy');
+
 //les routes categories des cars
+
 Route::get('categories','Cars_categoriesController@index');
 Route::get('categories/create','Cars_categoriesController@create');
 Route::post('categories','Cars_categoriesController@store');
@@ -32,7 +37,9 @@ Route::get('categories/{id}/edit','Cars_categoriesController@edit');
 Route::get('categories/{id}/details','Cars_categoriesController@details');
 Route::put('categories/{id}','Cars_categoriesController@update');
 Route::get('categories/{id}','Cars_categoriesController@destroy');
+
 //les routes clients
+
 Route::get('clients','ClientsController@index');
 Route::get('clients/create','ClientsController@create');
 Route::post('clients','ClientsController@store');
@@ -40,7 +47,9 @@ Route::get('clients/{id}/edit','ClientsController@edit');
 Route::get('clients/{id}/details','ClientsController@details');
 Route::put('clients/{id}','ClientsController@update');
 Route::get('clients/{id}','ClientsController@destroy');
+
 //les routes cities
+
 Route::get('cities','CitiesController@index');
 Route::get('cities/create','CitiesController@create');
 Route::post('cities','CitiesController@store');
@@ -48,12 +57,16 @@ Route::get('cities/{id}/edit','CitiesController@edit');
 Route::get('cities/{id}/details','CitiesController@details');
 Route::put('cities/{id}','CitiesController@update');
 Route::get('cities/{id}','CitiesController@destroy');
+
 //les routes reservations
+
 Route::get('reservations','ReservationsController@index');
 Route::get('reservations/create','ReservationsController@create');
 Route::get('reserver/{id}','ReservationsController@create_client');
 Route::post('reservations','ReservationsController@store');
+
 //Route::post('reservations_client','ReservationClientController@store_client');
+
 Route::get('reservations/{id}/edit','ReservationsController@edit');
 Route::get('reservations/{id}/annuler','ReservationsController@annuler');
 Route::get('reservations/corbeille','ReservationsController@corbeille');
@@ -68,7 +81,7 @@ Route::get('supplement_cars/{id}/edit','Cars_SupplementsController@edit');
 Route::get('supplement_cars/{id}/details','Cars_SupplementsController@details');
 Route::put('supplement_cars/{id}','Cars_SupplementsController@update');
 Route::get('supplement_cars/{id}','Cars_SupplementsController@destroy');
-//msg
+//les routes msg
 Route::get('messages','MessagesController@index');
 Route::get('messages/create','MessagesController@create');
 Route::post('messages','MessagesController@store');
@@ -86,6 +99,9 @@ Route::post('blog_categories','Blog_categoriesController@store');
 Route::get('blog_categories/{id}/edit','Blog_categoriesController@edit');
 Route::get('blog_categories/{id}/details','Blog_categoriesController@details');
 Route::put('blog_categories/{id}','Blog_categoriesController@update');
+
+//blog_post et blog_categorie sont les categories des posts et les posts et ce sont des blogs
+
 //blogs_posts
 Route::get('blog_posts','Blog_postsController@index');
 //Route::get('blog_posts/{id}/consulter','Blog_postsController@index_client');
@@ -106,19 +122,24 @@ Route::get('blog_comments/{id}/edit','Blog_commentsController@edit');
 Route::get('blog_comments/{id}/details','Blog_commentsController@details');
 Route::put('blog_comments/{id}','Blog_commentsController@update');
 Route::get('blog_comments/{id}','Blog_commentsController@destroy');
+
+//dans ce controller(AjaxController) il y a le code ajax et return des objets json
+
 Route::get('/post-data', 'AjaxController@receive')->name('ajax');
-//res_cli
+Route::get('ajaxRequest', 'AjaxController@ajaxRequest');
+Route::get('ajaxRecherche', 'AjaxController@ajaxRecherche');
+Route::get('ajaxCars', 'AjaxController@ajaxCars');
+//la gestions des publications et des commentaires
 Route::get('/getComments/{id}','Blog_commentsController@getComments');
 Route::get('/getPosts','Blog_postsController@getPosts');
 Route::post('/addComment/{id}','Blog_commentsController@addComment');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+//la page de la facture 
 Route::get('facture/{id}', 'PrincipaleController@facture');
 Route::get('facture', 'PrincipaleController@fac');
-Route::get('ajaxRequest', 'AjaxController@ajaxRequest');
-Route::get('ajaxRecherche', 'AjaxController@ajaxRecherche');
-Route::get('ajaxCars', 'AjaxController@ajaxCars');
 Route::get('/principale','PrincipaleController@index');
+//pour le paiement PayPal
 Route::post('payment','PaymentController@payment');
 Route::get('canceled','PaymentController@cancel');
 Route::get('status/{id}/{price}','PaymentController@status');

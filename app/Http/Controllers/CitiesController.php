@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Cities;
 use Illuminate\Http\UploadedFile;
 use App\Http\Requests\citieRequest;
+
+//ajout des ville , chaque ville il a des tarifs dans le payement
+
 class CitiesController extends Controller
 {
   public function __construct(){

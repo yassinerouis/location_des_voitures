@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Messages;
 use Illuminate\Support\Facades\DB;
+/*l'echange des messages entre les administrateurs et les utilisateurs 
+de l'application se fait grace à ce controlleur*/
+
 class MessagesController extends Controller
 {
 
     public function __construct(){
         $this->middleware('auth');
       }
-     //lister les cars
+     //lister les messages
      public function index(){
         $x=User::find(Auth::user()->id);
         if($x->is_admin){

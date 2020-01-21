@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Cars_categories;
 use App\Http\Requests\car_categorieRequest;
+//la gestion des categories des voitures
+
 class Cars_categoriesController extends Controller
 {
     public function __construct(){

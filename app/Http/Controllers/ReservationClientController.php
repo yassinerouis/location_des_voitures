@@ -10,6 +10,9 @@ use App\Cars;
 use App\Reservations;
 use App\Supplement_reservations;
 use Illuminate\Support\Facades\DB;
+ 
+//les reservations effectuees par le client
+
 class ReservationClientController extends Controller
 {
     

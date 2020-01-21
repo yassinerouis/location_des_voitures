@@ -9,12 +9,14 @@ use App\Supplements;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\UploadedFile;
 
+//les supplements des voitures , par exemple : GPS , Siège enfant ...
+
 class Cars_supplementsController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
       }
-     //lister les cars
+     //lister les supplements des voitures
      public function index(){
         $listcar=DB::table('cars_supplements')
         ->join('supplements',"supplements.id",'=','cars_supplements.supplement_id')
@@ -28,7 +30,7 @@ class Cars_supplementsController extends Controller
      $listcat=Cars::all();
      return view ('supplements_car.create',['cars'=>$listcat]);
   }
-   //enregistrer un car
+   //enregistrer un supplement 
   public function store(Request $request){
      $scar=new Cars_supplements();
 $supplement=new Supplements();
@@ -49,7 +51,7 @@ $supplement=new Supplements();
   return  redirect ('supplement_cars');
   }
  
-  //supprimer un car
+  //supprimer un supplement 
   public function destroy(Request $request,$id){
      $car=Cars_supplements::find($id);
     

@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog_categories;
+//autoriser pour l'admin (en general) , mais il y a des routes pour l'utilisateur
+//ce controlleur fais la gestion des categories des publications publiees par les administrateurs
+//blog_categorie:categorie d'une publication
 class Blog_categoriesController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
       }
-    //lister les blogs
+    //lister les categories
    public function index(){
 
     $listcat=Blog_categories::all();
@@ -21,7 +24,7 @@ public function create(){
 return view('blog_categories.create');
 }
 
- //enregistrer un car
+ //enregistrer la categorie
 public function store(Request $request){
    $categorie=new Blog_categories();
     $categorie->name=$request->input('nom');
@@ -33,16 +36,17 @@ public function store(Request $request){
 $categorie->save();
 return  redirect ('blog_categories');
 }
-//recuperer un car -> mettre dans formulaire
+//recuperer une categorie -> mettre dans le formulaire
 public function edit($id){
     $categorie=Blog_categories::find($id);
     return view ('blog_categories.edit',['categorie'=>$categorie]);
 }
+//recuperer une categorie -> envoyer pour l'affichage
 public function details($id){
     $categorie=Blog_categories::find($id);
     return view ('blog_categories.details',['categorie'=>$categorie]);
 }
-//modifier un car
+//modifier une categorie
 public function update(Request $request,$id){
     $categorie=Blog_categories::find($id);
     $categorie->name=$request->input('nom');
@@ -54,7 +58,7 @@ public function update(Request $request,$id){
 $categorie->save();
 return  redirect ('blog_categories');
 }
-//supprimer un car
+//supprimer une categorie
 public function destroy(Request $request,$id){
     $categorie=Blog_categories::find($id);
     $categorie->delete();
