@@ -1,7 +1,6 @@
 # location_des_voitures
 Spécification détaillée des besoins :
 1)	Interface d’accueil :
-
 C’est la page d’accueil dans laquelle je fais la différence entre les clients et
 les administrateurs avant d’entrer au fonctionnement principal de l’application pour effectuer la location des voitures.
 L’utilisateur crée un compte avant. 
@@ -33,4 +32,4 @@ Dans les vues du Framework PHP LARAVEL j’ai travaillé avec :
 -	AJAX JQUERY
 -	JAVASCRIPT
 -	CSS
-Pour plus de détails sur les interfaces : fichier readme.(doc/pdf)
+Pour plus de détails sur les interfaces vous pouvez consulter le fichier README.(doc/pdf)
